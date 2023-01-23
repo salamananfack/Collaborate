@@ -8,9 +8,10 @@
     <title>www.yummy.com</title>
 </head>
 <body>
-    <label>
-        <a href="#" class="logo">YUMMY<span class="point">.</span></a>
-        <div class="menuToggle" onclick="toggleMenu();"></div>
+    <label id="label">
+        <a href="#" class="logo">
+            YUMMY<span class="point">.</span>
+        </a>
    
         <ul class="navbar" id="ma-navbar">
             <li><a href="#HOME" onclick="toggleMenu();">Home</a></li>
@@ -30,8 +31,17 @@
             </li>
             <li><a href="#contact" onclick="toggleMenu();">Contacts</a></li>  
         </ul>
-
+        <span class="menu-btn" id="menu-btn"><img src="./icons8-menu-rounded-50.png" alt=""></span>
         <button class="book_a_table">Book a table</button>
     </label>
+
+    <script>
+        let menubtn = document.getElementById("menu-btn");
+        let manavbar = document.getElementById("ma-navbar");
+        
+        menubtn.addEventListener('click',()=>{
+            manavbar.classList.toggle('mobile-menu')
+        })
+    </script>
 </body>
 </html>
